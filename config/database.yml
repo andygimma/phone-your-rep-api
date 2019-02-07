@@ -1,27 +1,38 @@
-default: &default
+development:
+  username: postgres
+  password: postgres
   adapter: postgis
   encoding: unicode
   postgis_extension: postgis
   schema_search_path: public, postgis
   pool: 5
   timeout: 5000
-
-development:
-  <<: *default
   database: phonerep_dev
-  host: localhost
+  host: postgres
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+  username: postgres
+  password: postgres
   adapter: postgis
   encoding: unicode
   postgis_extension: postgis
+  schema_search_path: public, postgis
+  pool: 5
+  timeout: 5000
   database: phonerep_test
-  host: localhost
+  host: postgres
 
 production:
-  <<: *default
+  username: postgres
+  password: postgres
+  adapter: postgis
+  encoding: unicode
+  postgis_extension: postgis
+  schema_search_path: public, postgis
+  pool: 5
+  timeout: 5000
   database: phonerep_prod
   url: <%= ENV["DATABASE_URL"] ? ENV["DATABASE_URL"].sub(/^postgres/, "postgis") : "" %>

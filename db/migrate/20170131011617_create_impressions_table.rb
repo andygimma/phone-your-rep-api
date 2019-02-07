@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateImpressionsTable < ActiveRecord::Migration
+class CreateImpressionsTable < ActiveRecord::Migration[5.0]
   def self.up
     create_table :impressions, force: true do |t|
       t.string :impressionable_type
