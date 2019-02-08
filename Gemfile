@@ -8,7 +8,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activerecord-postgis-adapter', '~> 5.0'
+gem 'activerecord-postgis-adapter', '~> 5.2.2'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bugsnag', '~> 5.0', '>= 5.3.3'
 gem 'devise', '~> 4.2'
@@ -32,7 +32,7 @@ gem 'rack-attack', '~> 5.0.0', '>= 5.0.1'
 gem 'rack-cors', '~> 0.4.0'
 gem 'rails', '~> 5.1'
 gem 'responders', '~> 2.4'
-gem 'rgeo-shapefile', '~> 0.4.2'
+gem 'rgeo-shapefile', '~> 1.1.0'
 gem 'rqrcode', '~> 0.10.1'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'vpim', '~> 13.11', '>= 13.11.11'
